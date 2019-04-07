@@ -7,6 +7,14 @@ public class Teacher {
 	private int age;
 	private double score;
 	private String address;
+	private int classid;
+
+	public int getClassid() {
+		return classid;
+	}
+	public void setClassid(int classid) {
+		this.classid = classid;
+	}
 	public int getId() {
 		return id;
 	}

@@ -18,7 +18,7 @@
 
 <div>
 <h3>
-<a href="goTOTeacherPage">1.老师信息总览</a>
+<a href="goToTeacherPage">1.老师信息总览</a>
 </h3>
 
 <h3>
@@ -26,7 +26,7 @@
 </h3>
 
 <h3>
-<a href="">3.增加老师信息</a>
+<a href="goToAddPage">3.增加老师信息</a>
 </h3>
 
 <h3>

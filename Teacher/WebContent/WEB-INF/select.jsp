@@ -6,7 +6,21 @@
 
 
 <html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="./js/jquery-3.3.1.js">
+
+</script>
+<script type="text/javascript" src="./js/select.js">
+
+</script>
 </head>
+
+
+
+
 
 <body>
 	<div>
@@ -20,6 +34,8 @@
 				<th>年龄</th>
 				<th>成绩</th>
 				<th>住所</th>
+				<th>班级</th>
+
 			</tr>
 
 			<!--  获取studencontroller层的循环内容   student类     -->
@@ -31,6 +47,7 @@
 					<td>${teacher.age}</td>
 					<td>${teacher.score}</td>
 					<td>${teacher.address}</td>
+					<td>${teacher.classid}</td>
 				</tr>
 			</c:forEach>
 
@@ -43,8 +60,8 @@
 
 	<div>
 	<h3>ID查询</h3>
-	 <form id="getID" action="getStudentById" method="post">
-	 <input id="teacher" type="text" name="id" placeholder="请输入老师的id">
+	 <form id="getID" action="getTeacherById" method="post">
+	 <input id="teaId" type="text" name="id" placeholder="请输入老师的id">
 	 <input id="queryId" type="submit" value="确认">
 	 </form>
 
@@ -54,8 +71,8 @@
 
 	<div>
 	<h3>name查询</h3>
-	 <form id="getname" action="getStudentByName" method="post">
-	 <input id="teacher" type="text" name="name" placeholder="请输入老师的name">
+	 <form id="getname" action="getTeacherByName" method="post">
+	 <input id="teaName" type="text" name="name" placeholder="请输入老师的name">
 	 <input id="queryname" type="submit" value="确认">
 	 </form>
 

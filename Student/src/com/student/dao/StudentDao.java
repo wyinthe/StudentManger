@@ -29,7 +29,8 @@ public class StudentDao {
 	}
 
 	/**
-	 * 查询数据库所以信息
+	 * 这段是用于查询总信息
+	 * 查询数据库所有信息
 	 */
 
 	public List<Student> queryAll() {
@@ -45,12 +46,9 @@ public class StudentDao {
 	}
 
 
-	public List<Student> queryByName(String name) {
-		String sql = "SELECT id,name,birthday,age,score,classid,address FROM studentone WHERE name ='" + name + "'";
-		List<Student> studentList = jdbcTemplate.query(sql, new StudentMapper());
-		return studentList;
 
-	}
+
+
 
 	/**回到dao层 在这边
 	 * 根据ID查询学生信息
@@ -62,5 +60,85 @@ public class StudentDao {
 
 
 	}
+/**
+ * 4在dao层链接
+ * @param stuName
+ * @return
+ */
+	public List<Student> queryByName(String stuName) {
+		String sql = "SELECT id,name,birthday,age,score,classid,address FROM studentone WHERE name ='" + stuName + "'";
+		List<Student> studentList = jdbcTemplate.query(sql, new StudentMapper());
+		return studentList;
+
+	}
+
+	public boolean deleteStudentById(int stuId) {
+		String sql = "DELETE FROM studentone WHERE id = ?";
+		//增删改都是用到update
+		boolean result =jdbcTemplate.update(sql, stuId) == 1;
+		//return jdbcTemplate.update(sql, stuId) == 1;
+		return result;
+	}
+
+
+	public boolean deleteStudentByName(String stuName) {
+		String sql = "DELETE FROM studentone WHERE name = ?";
+		boolean result =jdbcTemplate.update(sql, stuName) == 1;
+		return result;
+
+	}
+
+	public boolean addStudent(Student student) {
+		String sql = "INSERT INTO studentone(id,name,birthday,age,score,classId,address) values(0,?,?,?,?,?,?)";
+		boolean result =jdbcTemplate.update(sql,
+				                            student.getName(),
+				                            student.getBirthday(),
+				                            student.getAge(),
+				                            student.getScore(),
+				                            student.getClassId(),
+				                            student.getAddress()
+				                            ) == 1;
+		return result;
+
+
+
+	}
+
+
+/**
+ * 学生のテーブルを更新
+ * @param student
+ * @return
+ */
+	public boolean updateStudent(Student student) {
+	String sql = "UPDATE studentone SET name=?,birthday=?,age=?,score=?,classid=?,address=? WHERE id=?";
+	boolean result = jdbcTemplate.update(sql,
+			                             student.getName(),
+			                             student.getBirthday(),
+			                             student.getAge(),
+			                             student.getScore(),
+			                             student.getClassId(),
+			                             student.getAddress(),
+			                             student.getId()
+			                             ) ==1;
+	return result;
+
+
+
+
+
+	}
+
+	public boolean addAddress(int stuId,String stuAddress) {
+		String sql = "UPDATE studentone SET address=? WHERE id=?";
+		boolean result = jdbcTemplate.update(sql,stuAddress,stuId)==1;
+		return result;
+	}
+
+
+
+
+
+
 
 }

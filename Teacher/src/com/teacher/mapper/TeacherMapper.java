@@ -23,6 +23,7 @@ public class TeacherMapper implements RowMapper<Teacher> {
 		teacher.setAge(rs.getInt("age"));
 		teacher.setScore(rs.getDouble("score"));
 		teacher.setAddress(rs.getString("address"));
+		teacher.setClassid(rs.getInt("classid"));
 
 		return teacher;
 	}

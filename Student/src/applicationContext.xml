@@ -25,8 +25,12 @@
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
     </bean>
 
-    <!-- dao层类-->
+    <!-- dao层类 调取StudentDao类的配置文件-->
     <bean id="StuDao" class="com.student.dao.StudentDao">
     </bean>
+     <!-- dao层类调取PageDao类的配置文件-->
+    <bean id="pageDao" class="com.student.dao.PageDao">
+    </bean>
+
 
  </beans>

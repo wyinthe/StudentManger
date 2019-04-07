@@ -1,6 +1,7 @@
 package com.student.bean;
 
 import java.io.Serializable;
+import java.util.Date;
 /**
  * 与要使用的数据表一一对应，待 Student类 与 数据库中的数据表映射完成后，可以形成关联，
  * 从而可以通过 Student类 存取数据表中的信息
@@ -18,7 +19,7 @@ public class Student implements Serializable{
 	//变数定义name
 	private String name;
 	//变数定义birthday
-	private String birthday;
+	private Date birthday;
 	//变数定义age
 	private int age;
 	//变数定义score
@@ -27,9 +28,9 @@ public class Student implements Serializable{
 	private int classid;
 	//变数定义address
 	private String address;
-	
-	
-	
+
+
+
 	public int getId() {
 		return id;
 	}
@@ -42,10 +43,11 @@ public class Student implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getBirthday() {
+
+	public Date getBirthday() {
 		return birthday;
 	}
-	public void setBirthday(String birthday) {
+	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
 	}
 	public int getAge() {

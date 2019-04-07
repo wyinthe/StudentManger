@@ -24,11 +24,9 @@ public class StudentMapper implements RowMapper<Student>{
 		//用set的方法，吧数据表中的数据赋值给Student类，rs后的括号内，双引号中是数据表的列名称
 		student.setId(rs.getInt("id"));
 		student.setName(rs.getString("name"));
-		student.setBirthday(getStrBirthday(rs.getString("birthday")));
+		student.setBirthday(rs.getDate("birthday"));
 		student.setAge(rs.getInt("age"));
 		student.setScore(rs.getDouble("score"));
-		student.setClassid(rs.getInt("classid"));
-		student.setAddress(rs.getString("address"));
 
 
 		//设置返回值

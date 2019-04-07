@@ -6,6 +6,8 @@
 
 <html>
 <head>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- style css可以用来修改字体与其他 -->
 <style type="text/css">
@@ -46,6 +48,33 @@ float:Left;
 <!-- id唯一性   class分组多选能选择class里面的全部   <a开始定义超链接  -->
 <a id="Link1" class="box1" href="https://start.firefoxchina.cn/">
 <font color="red">google查询</font>
+<br>
+<br>
+
+
+
+<img src=”image.png” alt="猫の写真" title="可愛い猫">
+<div class="center">
+インライン要素
+</div>
+.center{
+border: 1px solid #aaa;
+width: 400px;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </a>
 
@@ -69,7 +98,16 @@ sports<br>
 <div id="box3">
 
 </div>
-
+<body>
+<div id="box3">
+<h1> Hello world </h1>
+<h2>Hello world</h2>
+<h3>Hello world</h3>
+<h4>Hello world</h4>
+<h5>Hello world</h5>
+<h6>Hello world</h6>
+</div>
+</body>
 
 </body>
 </html>

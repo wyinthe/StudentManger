@@ -26,16 +26,19 @@
 </h3>
 
 <h3>
-<a href="">3.</a>
+<a href="goToDeletePage">3.学生の情報を削除</a>
 </h3>
 
 
-<h3>
-<a href="">4.</a>
-</h3>
 
 <h3>
-<a href="">5.</a>
+<a href="gotoAddPage">4.学生の情報を追加</a>
+</h3>
+
+
+
+<h3>
+<a href="goToUpDatePage">5.学生の情報を更新</a>
 </h3>
 
 </div>
